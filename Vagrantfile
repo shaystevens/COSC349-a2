@@ -26,9 +26,9 @@ Vagrant.configure("2") do |config|
       # parameters from environment variables (more secure than
       # committing security credentials to your Vagrantfile).
       #
-      #aws.access_key_id = "YOUR KEY"
-      #aws.secret_access_key = "YOUR SECRET KEY"
-      #aws.session_token = "SESSION TOKEN"
+      aws.access_key_id = ""
+      aws.secret_access_key = ""
+      aws.session_token = ""
   
       # The region for Amazon Educate is fixed.
       aws.region = "us-east-1"
@@ -60,7 +60,7 @@ Vagrant.configure("2") do |config|
       # they should be comma-separated (if you use more than one) within
       # square brackets.
       #
-      aws.security_groups = ["sg-0a7adf5d4bdc69060"]
+      aws.security_groups = ["sg-0a7adf5d4bdc69060", "sg-0c36a73ffcb70015a"]
   
       # For Vagrant to deploy to EC2 for Amazon Educate accounts, it
       # seems that a specific availability_zone needs to be selected
@@ -83,15 +83,15 @@ Vagrant.configure("2") do |config|
   
       # If using Ubuntu, you probably also need to uncomment the line
       # below, so that Vagrant connects using username "ubuntu".
-      ##override.ssh.username = "ubuntu"
+      override.ssh.username = "ubuntu"
     end
   
     # Enable provisioning with a shell script. Additional provisioners such as
     # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
     # documentation for more information about their specific syntax and use.
-    # config.vm.provision "shell", inline: <<-SHELL
-    #   apt-get update
-    #   apt-get install -y apache2
-    # SHELL
+    config.vm.provision "shell", inline: <<-SHELL
+       apt-get update
+       apt-get install -y apache2
+     SHELL
   end
   
