@@ -1,0 +1,110 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#CB2B3E",
+        "type": "Office",
+        "name": "Doge Rental Office"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          170.534486,
+          -45.881741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#FFD326",
+        "name": "Wakari Dog Park",
+        "type": "Dog Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          170.4732462,
+          -45.855873
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#FFD326",
+        "name": "Shand Park",
+        "type": "Dog Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          170.4210106,
+          -45.9043256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#FFD326",
+        "type": "Dog Park",
+        "name": "East Taieri Dog Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          170.3274851,
+          -45.8911919
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#2A81CB",
+        "type": "Waking Track",
+        "name": "Frasers Gully Bush Walk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          170.4547271,
+          -45.8631022
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#2A81CB",
+        "type": "Waking Track",
+        "name": "Ross Creek Reservoir Forest Walk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          170.4961343,
+          -45.8449109
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#2A81CB",
+        "type": "Waking Track",
+        "name": "Highcliff Track"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          170.5954646,
+          -45.8953155
+        ]
+      }
+    }
+  ]
+}

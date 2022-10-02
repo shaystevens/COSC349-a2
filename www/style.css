@@ -1,0 +1,455 @@
+/*
+My style Sheet for dog rental website
+Shay Stevens
+ */
+
+/*Font style*/
+@font-face {
+    font-family: 'Good boy';
+    src: url('fonts/Goodboy.woff2') format('woff2'),
+         url('fonts/Goodboy.woff') format('woff'),
+         url('fonts/Goodboy.ttf')  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Style for admin link on index page*/
+#adminAvatar{
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-right: 10px;
+    float: right;
+}
+
+#adminHeader{
+    margin-right: 5px;
+    margin-top: -120px;
+    font-family: sans-serif;
+    background: linear-gradient(to bottom, darkgoldenrod, goldenrod);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    float: right;
+}
+
+#usernameInput, #passwordInput{
+    text-align: center;
+    padding: 12px 50px;
+    margin-left: 20px;
+    font-size: 20px;
+    margin: auto;
+    display: block;
+}
+
+#login-header, #error-header{
+    font-family: aerial; 
+    color: white;
+    font-size: 70px;
+    margin-left: 30px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#login-form-submit{
+    margin-left: 700px;
+    width: 100px;
+    font-size: 20px;
+}
+
+/* Index header style*/
+h1 {
+    text-align: left;
+    font-family: "Good boy", sans-serif;
+    margin-left: 10px;
+    margin-top: -10px;
+    font-size: 100px;
+    background: linear-gradient(to bottom,black 1%, darkgoldenrod, goldenrod, white 80%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding-bottom: 10px;
+}
+
+/* Index body style */
+.body{
+    background-image: url("images/pexels-anna-shvets-4588013.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+/* Index header style */
+header{
+    margin-left: -8px;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height:150px;
+    opacity: 85%;
+    z-index: -1;
+}
+
+/* Style for index header anchor */
+.indexHeaderA{
+    background: linear-gradient(to bottom, lightgray, white 35%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    display: inline-block;
+    height: 80px;
+    font-size: 60px;
+    padding-right: 60px;
+    padding-top: 10px;
+    font-family: "Good boy", sans-serif;
+}
+
+.ah2{
+    text-decoration: none;
+    margin-right: 10px;
+    justify-content: left;
+    display:inline-block;
+    width:250px;
+}
+
+/* Header style for h2 and anchor*/
+h2{
+    margin-left: 10px;
+    margin-top: -10px;
+    z-index: 10001;
+    position: fixed;
+    font-family: "Good boy", sans-serif;
+    font-size: 60px;
+    display: block;
+    background: linear-gradient(to bottom,black 1%, darkgoldenrod, goldenrod, white 80%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding-bottom: 10px;
+
+}
+
+/* Style for header2 class */
+.header2{
+    margin-left: -8px;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    opacity: 70%;
+    background-color: black;
+}
+
+/* style for every body */
+body{
+    background: linear-gradient(90deg, #CDB7F6 , #FFEFFF, #B19CD9);
+}
+
+/* unordered list style */
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+/*style for header anchor class*/
+.headerA{
+    background: linear-gradient(to bottom, lightgray, white 35%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    display: inline-block;
+    height: 50px;
+    font-size: 40px;
+    font-family: "Good boy", sans-serif;
+}
+
+/* list style */
+li{
+    display: inline-block;
+    padding-top: 15px;
+    padding-right: 30px;
+}
+
+/* table style */
+table {
+    margin-top: -90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* style for all images in dog main */
+#dogs img{
+    height: 410px;
+    width: 270px;
+}
+
+/* style for title class on dogs page */
+.title{
+    margin-top: 200px;
+    margin-left: 100px;
+    margin-right: 300px;
+    font-size: 30px;
+    font-family: cursive, "Brush Script MT";
+}
+
+/* style for flipping the dogs card */
+.flip-box {
+    background-color: transparent;
+    width: 270px;
+    height: 410px;
+    margin-left: 100px;
+    margin-top: -30px;
+    border: 1px solid black;
+    perspective: 1000px;
+}
+
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.2s;
+    transform-style: preserve-3d;
+}
+
+
+.card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+
+.card-back {
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Akira card style */
+#Akira{
+    background: linear-gradient(to right, cornflowerblue, deepskyblue, dodgerblue);
+}
+
+/* Doge card style */
+#Doge{
+    background: linear-gradient(to right, darkgoldenrod, goldenrod, palegoldenrod);
+}
+
+/* Ava card style */
+#Ava{
+    background: linear-gradient(to right, yellowgreen, greenyellow);
+}
+
+/* Snoopy card style */
+#Snoopy{
+    background: linear-gradient(to right, red, tomato);
+}
+
+/* Daisy card style */
+#Daisy{
+    background: linear-gradient(to left, hotpink, deeppink);
+}
+
+/* Ronnie card style */
+#Ronnie{
+    background: linear-gradient(to right, orange, darkorange, sandybrown);
+}
+
+/* style for all p*/
+p{
+    font-size: 20px;
+    text-align: left;
+    margin-left: 10px;
+    color: white;
+}
+
+/* dog1 title text style */
+#dog1{
+    -webkit-text-fill-color: goldenrod;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: darkgoldenrod;
+}
+
+/* dog2 title text style */
+#dog2{
+    -webkit-text-fill-color: cornflowerblue;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: blue;
+}
+
+/* dog3 title text style */
+#dog3{
+    -webkit-text-fill-color: orange;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #c36b00;
+}
+
+/* dog4 title text style */
+#dog4{
+    -webkit-text-fill-color: hotpink;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: deeppink;
+}
+
+/* dog5 title text style */
+#dog5{
+    -webkit-text-fill-color: greenyellow;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: yellowgreen;
+}
+
+/* dog6 title text style */
+#dog6{
+    -webkit-text-fill-color: red;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: darkred;
+}
+
+/* style for buttons with bookingButton class */
+.bookingButton{
+    margin-top: 20px;
+    float: left;
+    margin-left: 200px;
+}
+
+/* Style for my custom alert on dogs page*/
+#customAlert{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1100;
+}
+
+#box{
+    border-radius: 5px;
+    margin: 200px auto auto;
+    height: 150px;
+    width: 500px;
+    text-align: center;
+    box-shadow: 2px 2px 8px black;
+    background-color: #CDB7F6;
+}
+
+#heading{
+    background-color: #BF80FF;
+    color: white;
+    font-size: larger;
+    padding: 5px;
+}
+
+/* Close button style*/
+#closeButton{
+    margin-left: 400px;
+    margin-top: 20px;
+}
+
+/* style for 2nd table on dogs page*/
+#table2{
+    margin-top: 0;
+    border-spacing: 100px;
+}
+
+/*date picker style*/
+#datepicker{
+    margin-left: 50px;
+}
+
+/* Style for company info on contact page*/
+#companyInfo{
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 30px;
+    color: white;
+}
+
+.error_messages{
+    color: red;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Style for mains and form (add boarder)*/
+#contactMain, #reviewMain, #bookingForm, #adminMain, #loginMain, #login-Validation-main{
+    padding: 10px;
+    margin: 150px auto 10px  auto;
+    border: 2px solid white;
+    border-radius: 10px 10px 10px 10px;
+    background: linear-gradient(90deg, #CDB7F6, #B19CD9);
+    color: inherit;
+    width: 1250px;
+}
+
+/* Style for review header class*/
+.review-header{
+    color: white;
+    font-size: 40px;
+    margin-left: 25px;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+/* Style for review author class*/
+.review-author{
+    color: white;
+    margin-left: 45px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Style for review description class*/
+.review-description{
+    color: white;
+    margin-left: 25px;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+/* Style for contact header*/
+.contact-header{
+    color: white;
+    font-size: 40px;
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+/* Style for locations on contact page */
+.locations{
+    margin-left: 150px;
+    color: white;
+    font-size: 30px;
+    width: max-content;
+}
+
+/* park locations style */
+.park-locations{
+    margin-left: 150px;
+    color: white;
+    font-size: 30px;
+    width: max-content;
+}
+
+/* track location style */
+.track-locations{
+    margin-left: 150px;
+    color: white;
+    font-size: 30px;
+    width: max-content;
+}
+
+/*div style on contact page*/
+#contactDiv{
+    text-align: center;
+}

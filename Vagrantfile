@@ -85,13 +85,16 @@ Vagrant.configure("2") do |config|
       # below, so that Vagrant connects using username "ubuntu".
       override.ssh.username = "ubuntu"
     end
-  
-    # Enable provisioning with a shell script. Additional provisioners such as
-    # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
-    # documentation for more information about their specific syntax and use.
-    config.vm.provision "shell", inline: <<-SHELL
-       apt-get update
-       apt-get install -y apache2
-     SHELL
+
+    config.vm.define "webserver" do |webserver|
+        webserver.vm.hostname = "webserver"
+        webserver.vm.provision "shell", path: "build-webserver-vm.sh"
+    end
+
+    config.vm.define "adminserver" do |adminserver|
+        adminserver.vm.hostname = "adminserver"
+        adminserver.vm.provision "shell", path: "build-adminserver-vm.sh"
+    end
+
   end
   

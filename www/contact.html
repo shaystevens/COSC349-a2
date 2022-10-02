@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doge Rental Map</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="leaflet.css"/>
+    <script src="leaflet.js"></script>
+    <script src="map.js"></script>
+</head>
+<body id ='contactBody'>
+<header class ="header2">
+    <ul>
+        <li><a href="index.html" class="headerA">Home</a><li>
+        <li><a href="dogs.php" class="headerA">Rent a Doge</a></li>
+        <li><a href="reviews.html" class="headerA">Reviews</a></li>
+        <li><a class="headerA">About us</a></li>
+    </ul>
+</header>
+<a href="index.html" class="ah2"> <h2>Doge rentals oo</h2></a>
+<main id = "contactMain">
+    <p id="companyInfo">Welcome to Doge Rentals! We provide dogs for people to rent to fill that dog-shaped
+        void in their heart. We have multiple dogs available all with their own unique personality. We
+        have dogs that love to be taken on adventures, go to the dog park, or just be there on a
+        Saturday night to watch Netflix. We are avid supporters of cryptocurrency and
+        only accept payment in dogecoin. Our store hours are 9am-9pm and our office is located in Waverly
+        (see map below) come over for a chat one time!
+    </p>
+    <h3 class = 'contact-header'>Locations</h3>
+    <figure id='map'></figure>
+    <div id="contactDiv">
+        <input type="button" value="Hide Parks" class="contact-button" id="parkButton">
+        <input type="button" value="Hide Tracks" class ='contact-button' id="trackButton">
+    </div>
+</main>
+</body>
+</html>

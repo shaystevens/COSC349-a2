@@ -1,0 +1,40 @@
+{
+	"bookings": {
+		"booking": [
+			{
+				"dogId": ["DW-001", "DW-002"],
+				"name": "John Kismosis",
+				"pickup": {
+					"day": "15",
+					"month": "9",
+					"year": "2021",
+					"time": "12:00"
+				},
+				"numHours": "4"
+			},
+			{
+				"dogId": ["DW-003"],
+				"name": "Mr. Covington",
+				"pickup": {
+					"day": "27",
+					"month": "10",
+					"year": "2021",
+					"time": "10:00"
+				},
+				"numHours": "6"
+			},
+			{
+				"dogId": ["DW-001"],
+				"name": "Michael Scott",
+				"pickup": {
+					"day": "19",
+					"month": "12",
+					"year": "2021",
+					"time": "11:00"
+				},
+				"numHours": "2"
+			}
+
+		]
+	}
+}
