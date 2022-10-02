@@ -1,5 +1,15 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+class Hash
+    def slice(*keep_keys)
+      h = {}
+      keep_keys.each { |key| h[key] = fetch(key) if has_key?(key) }
+      h
+    end unless Hash.method_defined?(:slice)
+    def except(*less_keys)
+      slice(*keys - less_keys)
+    end unless Hash.method_defined?(:except)
+  end
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
@@ -16,9 +26,9 @@ Vagrant.configure("2") do |config|
       # parameters from environment variables (more secure than
       # committing security credentials to your Vagrantfile).
       #
-      # aws.access_key_id = "YOUR KEY"
-      # aws.secret_access_key = "YOUR SECRET KEY"
-      # aws.session_token = "SESSION TOKEN"
+      #aws.access_key_id = "YOUR KEY"
+      #aws.secret_access_key = "YOUR SECRET KEY"
+      #aws.session_token = "SESSION TOKEN"
   
       # The region for Amazon Educate is fixed.
       aws.region = "us-east-1"
@@ -35,30 +45,30 @@ Vagrant.configure("2") do |config|
       # :aws configuration section.
   
       # The keypair_name parameter tells Amazon which public key to use.
-      ##aws.keypair_name = ""
+      aws.keypair_name = "cosc349-2022"
       # The private_key_path is a file location in your macOS account
       # (e.g., ~/.ssh/something).
       # For Windows users, just point to the path where you have downloaded the keypair
       # (e.g., C:\\Users\\<username>\\foo.pem). (Use double "\\" for folder path)
-      ##override.ssh.private_key_path = ""
+      override.ssh.private_key_path = "~/.ssh/cosc349-2022.pem"
   
       # Choose your Amazon EC2 instance type (t2.micro is cheap).
-      ##aws.instance_type = "t2.micro"
+      aws.instance_type = "t2.micro"
   
       # You need to indicate the list of security groups your VM should
       # be in. Each security group will be of the form "sg-...", and
       # they should be comma-separated (if you use more than one) within
       # square brackets.
       #
-      ##aws.security_groups = [""]
+      aws.security_groups = ["sg-0a7adf5d4bdc69060"]
   
       # For Vagrant to deploy to EC2 for Amazon Educate accounts, it
       # seems that a specific availability_zone needs to be selected
       # (will be of the form "us-east-1a"). The subnet_id for that
       # availability_zone needs to be included, too (will be of the form
       # "subnet-...").
-      ##aws.availability_zone = ""
-      ##aws.subnet_id = ""
+      aws.availability_zone = "us-east-1a"
+      aws.subnet_id = "subnet-077c5f2445b5285b0"
   
       # You need to chose the AMI (i.e., hard disk image) to use. This
       # will be of the form "ami-...".
@@ -69,7 +79,7 @@ Vagrant.configure("2") do |config|
       # You need to get the region correct, and the correct form of
       # configuration (probably amd64, hvm:ebs-ssd, hvm).
       #
-      ##aws.ami = ""
+      aws.ami = "ami-0c1704bac156af62c"
   
       # If using Ubuntu, you probably also need to uncomment the line
       # below, so that Vagrant connects using username "ubuntu".
