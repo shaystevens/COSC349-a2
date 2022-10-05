@@ -2,16 +2,19 @@
 header("Location: dogs.php");
 
 if (isset($_POST['submit'])){
-    $db_host   = '192.168.56.12';
-    $db_name   = 'fvision';
-    $db_user   = 'webuser';
-    $db_passwd = 'insecure_db_pw';
+    $db_host   = 'cosc349-a2-database.cbqblifw4slt.us-east-1.rds.amazonaws.com';
+    $db_name   = 'bookingsdb';
+    $db_user   = 'admin';
+    $db_passwd = 'stesh969';
 
     // Create connection
-    $conn = mysqli_connect($db_host, $db_user, $db_passwd, $db_name);
+    $conn = mysqli_connect($db_host, $db_user, $db_passwd, $db_name, 3306);
     if (!$conn) {
+
         die("Connection failed: " . mysqli_connect_error());
     }
+    $test = var_export($conn, true);
+    echo "<p>$test</p>";
             
     $dogs = json_decode($_POST['dogs']);
 

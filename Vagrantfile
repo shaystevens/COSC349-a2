@@ -95,6 +95,6 @@ Vagrant.configure("2") do |config|
         adminserver.vm.hostname = "adminserver"
         adminserver.vm.provision "shell", path: "build-adminserver-vm.sh"
     end
-
+    
   end
   

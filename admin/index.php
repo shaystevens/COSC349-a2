@@ -1,10 +1,3 @@
-<?php
-session_start();
-if(!isset($_SESSION["admin"])){
-    header("Location: http://127.0.0.1:8080/index.html");
-    exit;
-}
-?>
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html lang="en">
 <head>
@@ -24,13 +17,12 @@ if(!isset($_SESSION["admin"])){
     </style>
 </head>
 <body>
-<h1><a href = "http://127.0.0.1:8080/index.html">Doge Rentals oo</a></h1>
 <main id="adminMain">
 <?php
-        $db_host   = '192.168.56.12';
-        $db_name   = 'fvision';
-        $db_user   = 'webuser';
-        $db_passwd = 'insecure_db_pw';
+        $db_host   = 'cosc349-a2-database.cbqblifw4slt.us-east-1.rds.amazonaws.com';
+        $db_name   = 'bookingsdb';
+        $db_user   = 'admin';
+        $db_passwd = 'stesh969';
         $pdo_dsn = "mysql:host=$db_host;dbname=$db_name";
         $pdo = new PDO($pdo_dsn, $db_user, $db_passwd);
         $q = $pdo->query("SELECT * FROM bookings");
